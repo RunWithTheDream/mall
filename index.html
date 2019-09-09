@@ -2,8 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>mall</title>
+    <!-- user-scalable: 禁止用户将屏幕缩放 viewport-fit: 屏幕全覆盖 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <!-- telephone: 禁止将手机号码展示为超链接 -->
+    <meta name="format-detection" content="telephone=no">
+    <title>myvue</title>
+    <script>
+      (function(desw){
+        var scrw = document.documentElement.clientWidth;
+        var styleNode = document.createElement('style');
+        styleNode.innerHTML='html{font-size:' + scrw / desw * 100 + 'px!important}';
+        document.head.appendChild(styleNode);
+      })(750)
+    </script>
   </head>
   <body>
     <div id="app"></div>
